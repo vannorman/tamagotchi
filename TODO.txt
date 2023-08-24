@@ -1,0 +1,103 @@
+@ Game design procedural mechanic
+    ^ 
+    ^
+    ^ Put infinite portals (or up to 100,100) at each x,y coord then have them all face the player. 
+    ^ The player is at the origin and can only progress by entering rational portals. (Player cannot pass a higher real number threshold than he has conquered one of the rational portals' value; for example he cannot pass Pi until he passes 22/7 at a maximum
+
+@ Codebase tags (search these in codebase for relevant code areas)
+   // performanceHelp  - this code performs poorly
+^ what
+
+@ Fixes / Code Improvements
+    // Simplify and standardize Game.Templatize. Push details out to the edge.
+    // Inject / DI more. No static "Game" references everywhere.
+    // Wall colliders - simply use 5 box colliders per dropped wall, x height 
+    // Portal teleport "flickers" and you see the previous terrain for 1 frame before new terrain.. ugly
+
+    // Inject Debug
+(function(){var a=document.createElement('script');a.src='https://yaustar.github.io/playcanvas-devtools/injector.js';document.head.appendChild(a);})(); // via https://github.com/yaustar/yaustar.github.io/tree/master/playcanvas-devtools
+
+# Immediate TODO
+    # Build a castle and village, similar to that one SC2 map you played multiplayer, you're a zerlging and venture out, level up, save money, buy and build houses until the map is dominated, remember??
+
+
+^ Key decisions to make soon
+    ^ Story Arc
+        - Try to make machines that decide things, run into mathematics undecidability problem
+
+    ^ Game Design Document draft
+        // Story Arc - First time user story
+            - Start in a "linear" track with specific challenges / walls / storyarc
+                - e.g. level 1 is a small procedural terrain, start in a corner, see story, find portal, see more story
+            - Travel through 3 of these "small world" challenges
+            Find a wizard who gives you access to your own world (#HOMESTEAD)
+                - Button to randomize it at first
+                - Place your stuff there, find it keep it
+                - Your own world collects portal accesses that you find
+                - Eventually, collect a portal into your inventory and place it in your homestead
+                - Sharing settings for portals you control, e.g. invite a friend into one of your controlled portals
+            - Story continues with mechanics e.g. the EULE resources
+
+    ^ Home base
+        - Your replicator, it takes Euls, get more of them to custom build your gadgets
+        - Any gadget you have found will appear in your home forever in a gallery so if you lost it 
+
+
+    ^ Game Loops
+        // "I need some seeds!" Why? 
+            - I want to get through "X" door!
+            - I want to explore "X"!
+            - I want to destroy "X"!
+            - I want to infiltrate "X"!
+        // Player starts in the same starting space
+            - Immediately dropped into a "linear" storyline
+
+        
+    ^ World mechanics
+        // Basic
+            - Fish ponds & Rivers
+            - Castles (controlled by entities, fortified with numbers)
+            - Battles w/ enemies
+            - Machines such as risers that enable you to access new areas
+            - Decay mechanic (Eul)
+            - Resource mechanic (Eul)
+        // Meta
+            - 
+
+
+
+    ^ Procedural elements
+        - Landscapes / hills
+        - Castles / walls
+        - Monster placement
+
+    ^ Persistent homestead
+        - Where do you start? What does it feel like to start this game for the first time?
+        - How do you access the "main world"? Is it a village, a castle?
+
+# Core game loops
+    # Homestead - start with base, build on top, persist.
+        - Harvest wood, stone, soil. 
+        - Build castle, wall, gate, bridge.
+        - Find and plant seeds.
+        - Conquer bosses and collect trophies for your shelf.
+    # Explore - there are forests, etc around you
+
+# Current featurelist
+    Gadgets: Sword, Multiblaster
+    Numbers: Create, walls, combine, chop
+    Castles: N-gon walls
+    Terrain: Perlin, Canyonized, Stepped
+    Portals
+
+
+// defer
+flickering shadows: lizard_wizard flickers when >1000 from origin (WTF)
+shader: https://launch.playcanvas.com/1070362?debug=true
+multiplayer: https://developer.playcanvas.com/en/tutorials/real-time-multiplayer/
+animations: https://playcanvas.com/editor/scene/1252803
+perlin3d terrain / 3d mesh terrain other than 2d perlin heightmap (hard)
+point cloud to mesh: https://towardsdatascience.com/5-step-guide-to-generate-3d-meshes-from-point-clouds-with-python-36bad397d8ba
+"rolling ball" algorithm may work for my "simple" perlin noise 3d; after finding the surfacae, simply drop a ball on any 3 points as a seed, then roll the ball around until every trio of points is hit, forming a triangle at each (no crossings!)
+
+

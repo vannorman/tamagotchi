@@ -1,0 +1,15 @@
+^ Fingerprint JS License needed 
+# https://github.com/fingerprintjs/fingerprintjs
+
+axis https://sketchfab.com/3d-models/axis-136a7d2eb94b40d496577533b01d163c#download
+cathedral https://www.turbosquid.com/3d-models/3d-gothic-architecture-1378501
+pirate islands w/ boat https://sketchfab.com/3d-models/pirate-island-low-poly-33c7dda932364d78888d6fda8c492ab5
+loom like church https://sketchfab.com/3d-models/sainte-chapelle-interior-61487e57ae1943ae9adc551a0cf179b3
+sailing church https://3dwarehouse.sketchup.com/model/4a41d30160791006133c4a644b85397/church
+cube cathedral https://3dwarehouse.sketchup.com/model/88210df5df25856b7b1313669a938220/CUBE-CATHEDRAL
+cathedral futuristic https://3dwarehouse.sketchup.com/model/b12f465bed06e6eb382ab8709b5635bd/Cathedral
+funky church https://www.cgtrader.com/items/4149991/download-page
+gothic church ceiling https://sketchfab.com/3d-models/gothic-church-ceiling-53ca14ca9cc245bdab31556656e0aab5#download
+
+lizard wizard https://sketchfab.com/3d-models/lizard-wizard-4a36fcde390f42b1957b79fd8c35146f#download
+low poly wizard rigged https://sketchfab.com/3d-models/low-poly-wizard-rigged-f8c91af65aec4779b0e3d857b1878cc2#download

@@ -1,0 +1,3 @@
+// Maths
+Stein's paradox (3 data points different distributions help estimate mew) https://www.youtube.com/watch?v=cUqoHQDinCM
+

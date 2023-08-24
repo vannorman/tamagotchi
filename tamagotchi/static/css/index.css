@@ -1,0 +1,176 @@
+html {
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+    width:100%;
+    max-width:100%;
+    top:0;left:0;
+    transition: all 0.2s;
+}
+
+body {
+    position:relative;
+    font-family:Nunito;
+    margin:0;padding:0;
+    overflow-x:hidden;
+}
+
+#header {
+    height:60px;
+    background-color:#522;
+    width:100%;
+    position:fixed;
+}
+#loadTrips{
+
+    display:none;
+}
+#savedTrips {
+    position:fixed;
+    display:none;
+    width:80%;
+    height:70%;
+    left:10%;
+    top:20%;
+    border:3px solid #444;
+    background-color:#eee;
+    overflow-y:scroll;
+    transition: all 0.3s;
+}
+
+#savedTrips .header {
+    text-align:center;
+}
+
+#savedTrips ul {
+    position:relative;
+    width:70%;
+    left:15%;
+list-style: none;
+    padding-left: 0;
+    }
+
+#savedTrips ul li {
+    border: 1px solid #333;
+    position:relative;
+}
+#savedTrips ul li .buttons {
+    float:right;
+    top: 20px;
+    position: absolute;
+    right: 0;
+}
+
+#saveResult{
+    color:green;
+}
+#closeTrips {
+   position:relative;
+   top:0;
+   left:calc(100% - 34px);
+   text-align:center;
+   line-height:34px;
+   font-size:1.5em;
+   width:34px;
+   height:34px;
+   background-color:gray;
+    border-radius:17px;
+}
+
+#closeTrips:hover {
+    cursor:pointer;
+
+    }
+#container {
+    position:relative;
+    margin-top:60px;
+}
+.calendar {
+  display: flex;
+  flex-wrap: wrap;
+  width: 64vw;
+}
+
+.monthTitle {
+    width:100%;
+    font-size:2.5em;
+    text-align:center;
+}
+.box {
+  width: calc(100% / 7); /* Set the width to occupy 1/7th of the container */
+  height:100px;
+  background-color: #e0e0e0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.box .num {
+    top:0;
+    left:0;
+    width:16px;
+    height:16px;
+    font-size:15px;
+    color:black;
+
+}
+/*
+#box4::after {
+content: "";
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 200px solid #ff0000;
+  position: absolute;
+  top: 0;
+  left: 0;
+}*/
+
+#menu {
+    position:absolute;
+    right:0;
+    top:20;
+    width:30vw;
+}
+
+#currentTrip {
+    padding:15px;
+    border: 1px solid #333;
+}
+
+.citiesTable {
+    display: table;
+}
+
+.numDays {
+    width:40px;
+}
+
+.up, .down {
+    width:10px;
+    height:10px;
+    border: 1px solid black;
+    font-size:0.8em;
+
+}
+.up:hover, .down:hover{
+    cursor:pointer;
+}
+
+.disabled {
+    pointer-events:none;
+    background-color:none;
+    border:none;
+}
+
+#cities td {
+    height:36px;
+}
+
+button:hover{
+    cursor:pointer;
+}
+
+.deleteTrip {
+    background-color:#c33;
+    float:right;
+}

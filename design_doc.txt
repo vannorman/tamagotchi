@@ -1,0 +1,18 @@
+What does this app do?
+- Help you plan trips
+    [✓] high level "x city y days" 
+    [ ] low lever "today we will ..." 
+    [ ] make reservations 
+        - RV reservation sites are not standardized, write a standardizing scraper
+    [ ] plug into google maps to draw the route
+    [ ] Mobile friendly
+    [ ] Multiple months
+- Keep a diary of per-day experiences
+    [ ] text editor opens for each calendar cell, enter, load, edit, and save notes as part of trip
+    [ ] ability to put links to external websites
+    [ ] 
+
+MILESTONES
+    - Phil test user
+        - open each cell, add text, add links, "print" whole trip.
+        - multiple month capability 

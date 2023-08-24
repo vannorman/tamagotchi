@@ -1,0 +1,44 @@
+	<link rel="icon" type="image/png" sizes="16x16" href="static/img/favicon.ico" />		
+
+<!doctype html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>playcanvas hello cube</title>
+    <meta name='viewport' content='width=600, height=400, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no' />
+    <style>
+        body {
+            margin: 0;
+            overflow: show;
+        }
+    </style>
+    
+    <script> const csrf = "{{ csrf }}" </script>
+    <script defer src="/static/js/scriptManager.js"></script>
+    <script>
+      // Initialize the agent at application startup.
+      var visitorId = "Undetected";
+      const fpPromise = import('/static/js/fingerprintjs/v4.js')
+        .then(FingerprintJS => FingerprintJS.load())
+
+      // Get the visitor identifier when you need it.
+      fpPromise
+        .then(fp => fp.get())
+        .then(result => {
+          // This is the visitor identifier:
+          visitorId = result.visitorId
+          console.log("visitorId:"+visitorId)
+        })
+    </script>
+
+</head>
+<body>
+    <canvas id='application'></canvas>
+
+
+
+</body>
+</html>
+
+

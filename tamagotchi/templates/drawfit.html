@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Draw and Fit Line</title>
+        <style>
+            #canvas { border:1px solid black; }
+        </style>
+    </head>
+    <body>
+        <canvas id="canvas" width="500" height="500"></canvas>
+        <button onclick="fitCurve()">Fit Curve</button>
+        <div id="equation"></div>
+        <script>
+            var canvas = document.getElementById('canvas');
+            var ctx = canvas.getContext('2d');
+            var drawing = false;
+            var x = 0;
+            var y = 0;
+            var points = [];
+
+            canvas.addEventListener('mousedown', function(e) {
+                x = e.offsetX;
+                y = e.offsetY;
+                drawing = true;
+            });
+
+            canvas.addEventListener('mousemove', function(e) {
+                if (!drawing) return;
+                ctx.beginPath();
+                ctx.moveTo(x, y);
+                x = e.offsetX;
+                y = e.offsetY;
+                ctx.lineTo(x, y);
+                ctx.stroke();
+                points.push(y);
+            });
+
+            canvas.addEventListener('mouseup', function(e) {
+                if (!drawing) return;
+                drawing = false;
+            });
+            function normalizeArray(arr) {
+                // Find the maximum and minimum values in the array
+                var minVal = Math.min(...arr);
+                var maxVal = Math.max(...arr);
+
+                // Normalize each element in the array
+                for (var i = 0; i < arr.length; i++) {
+                    arr[i] = (arr[i] - minVal) / (maxVal - minVal);
+                }
+            }
+            function fitCurve() {
+                console.log(points)
+                normalizeArray(points);
+                console.log(points)
+
+                // Your curve fitting algorithm here. As an example, we simply print the y points.
+                document.getElementById('equation').innerText = JSON.stringify(points, null, 2).replace(/\n/g, '');
+                points = [];  // Clear points after fitting
+            }
+        </script>
+    </body>
+</html>
+
